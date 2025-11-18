@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Monde du Foot - Kryst</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1508766206392-8bd5cf550d1d') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+        header {
+            background-color: rgba(0,0,0,0.7);
+            padding: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: gold;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 100px;
+            text-shadow: 2px 2px 4px black;
+        }
+        p {
+            background-color: rgba(0,0,0,0.5);
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.2em;
+        }
+body.light-mode {
+    filter: invert(0);
+}
+
+body.dark-mode {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="joueurs.html">Joueurs favoris</a>
+            <a href="tournois.html">Tournois</a>
+            <a href="galerie.html">Galerie</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+<button id="modeToggle" style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: gold;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+">
+    🌙 Mode sombre
+</button>
+
+
+    <h1>⚽ Le Monde du Foot par Kryst ⚽</h1>
+    <p>Bienvenue sur mon site dédié au football, ma plus grande passion !</p>
+</body>
+<script>
+    const toggle = document.getElementById("modeToggle");
+    const body = document.body;
+
+    body.classList.add("light-mode");
+
+    toggle.addEventListener("click", () => {
+        if (body.classList.contains("light-mode")) {
+            body.classList.remove("light-mode");
+            body.classList.add("dark-mode");
+            toggle.innerHTML = "☀️ Mode clair";
+        } else {
+            body.classList.remove("dark-mode");
+            body.classList.add("light-mode");
+            toggle.innerHTML = "🌙 Mode sombre";
+        }
+    });
+</script>
+
+</body>
+</html>
+
+</html>
