@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joueurs favoris - Le Monde du Foot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b132b;
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+        header {
+            background-color: #1c2541;
+            padding: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: gold;
+        }
+        h1 {
+            margin-top: 30px;
+            color: gold;
+        }
+        .joueurs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .carte {
+    background: linear-gradient(135deg, #d4af37, #f5e79e);
+    color: black;
+    border-radius: 15px;
+    width: 250px;
+    padding: 15px;
+    box-shadow: 0 0 15px gold;
+    font-weight: bold;
+}
+        .stats {
+    margin-top: 10px;
+    font-size: 0.95em;
+    line-height: 1.4em;
+}
+
+        .carte img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .nom {
+            font-size: 1.3em;
+            color: gold;
+            margin-top: 10px;
+        }
+        .club {
+            font-size: 1em;
+            color: #e0e0e0;
+        }
+body.light-mode {
+    filter: invert(0);
+}
+
+body.dark-mode {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="joueurs.html">Joueurs favoris</a>
+            <a href="tournois.html">Tournois</a>
+            <a href="galerie.html">Galerie</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+<button id="modeToggle" style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: gold;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+">
+    🌙 Mode sombre
+</button>
+
+
+    <h1>Mes Joueurs Favoris</h1>
+
+   <div class="joueurs">
+
+    <div class="carte">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Neymar_Jr_2018.jpg" alt="Neymar Jr">
+
+">
+        <div class="nom">Neymar Jr</div>
+        <div class="club">Al-Hilal 🇸🇦</div>
+        <div class="stats">
+            🎯 Buts : 400<br>
+            🅰️ Passes décisives : 250<br>
+            🏆 Clubs : Santos, Barça, PSG, Al-Hilal
+        </div>
+    </div>
+
+    <div class="carte">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Lionel_Messi_20180626.jpg" alt="Lionel Messi">
+        <div class="nom">Lionel Messi</div>
+        <div class="club">Inter Miami 🇺🇸</div>
+        <div class="stats">
+            🎯 Buts : 750<br>
+            🅰️ Passes décisives : 320<br>
+            🏆 Clubs : Barça, PSG, Inter Miami
+        </div>
+    </div>
+
+    <div class="carte">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ronaldinho_10-02-2017.jpg" alt="Ronaldinho">
+        <div class="nom">Ronaldinho</div>
+        <div class="club">Légende FC Barcelone 🇪🇸</div>
+        <div class="stats">
+            🎯 Buts : 300<br>
+            🅰️ Passes décisives : 200<br>
+            🏆 Clubs : Grêmio, PSG, Barça, Milan, Flamengo
+        </div>
+    </div>
+
+</div>
+</body>
+<script>
+    const toggle = document.getElementById("modeToggle");
+    const body = document.body;
+
+    body.classList.add("light-mode");
+
+    toggle.addEventListener("click", () => {
+        if (body.classList.contains("light-mode")) {
+            body.classList.remove("light-mode");
+            body.classList.add("dark-mode");
+            toggle.innerHTML = "☀️ Mode clair";
+        } else {
+            body.classList.remove("dark-mode");
+            body.classList.add("light-mode");
+            toggle.innerHTML = "🌙 Mode sombre";
+        }
+    });
+</script>
+
+</body>
+</html>
+
+</html>
+
